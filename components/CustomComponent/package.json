@@ -1,0 +1,51 @@
+{
+  "name": "@skyworthcloud/component",
+  "version": "1.0.3",
+  "description": "自定义工具条",
+  "files": [
+    "demo/",
+    "lib/",
+    "build/"
+  ],
+  "main": "lib/index.js",
+  "stylePath": "style.js",
+  "scripts": {
+    "start": "ice-scripts dev",
+    "build": "ice-scripts build",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba/ice"
+  },
+  "keywords": [
+    "ice",
+    "react",
+    "component"
+  ],
+  "dependencies": {
+    "@alifd/next": "^1.15.11",
+    "moment": "^2.24.0",
+    "prop-types": "^15.5.8"
+  },
+  "devDependencies": {
+    "ice-plugin-component": "^0.1.1",
+    "ice-plugin-fusion": "^0.1.9",
+    "ice-plugin-moment-locales": "^0.1.0",
+    "ice-scripts": "^2.1.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "@alifd/next": "^1.15.11",
+    "moment": "^2.24.0"
+  },
+  "componentConfig": {
+    "name": "custom-tool-bar",
+    "title": "custom tool bar",
+    "category": "Filter"
+  },
+  "homepage": "https://unpkg.com/@skyworthcloud/component@1.0.3/build/index.html"
+}
