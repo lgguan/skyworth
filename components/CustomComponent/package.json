@@ -1,6 +1,6 @@
 {
   "name": "@skyworthcloud/component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "自定义工具条",
   "files": [
     "demo/",
@@ -47,5 +47,5 @@
     "title": "custom tool bar",
     "category": "Filter"
   },
-  "homepage": "https://unpkg.com/@skyworthcloud/component@1.0.3/build/index.html"
+  "homepage": "https://unpkg.com/@skyworthcloud/component@1.0.4/build/index.html"
 }

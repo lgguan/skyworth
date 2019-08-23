@@ -55,9 +55,6 @@ class App extends Component {
     componentProps: {
       placeholder: 'Please select date',
       resetTime: true,
-      style: {
-        width: 30
-      }
     }
   },
   {
