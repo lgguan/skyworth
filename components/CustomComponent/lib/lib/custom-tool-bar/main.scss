@@ -1,0 +1,44 @@
+/* write style here */
+.tool-bar {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 10px 0;
+  }
+  .tool-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .tool-input {
+    width: 150;
+    margin-right: 15px;
+  }
+  
+  .tool-select {
+    width: 150;
+    margin-right: 15px;
+  }
+  
+  .tool-datePicker {
+    width: 150;
+    margin-right: 15px;
+  }
+  
+  .tool-timePicker {
+    width: 150;
+    margin-right: 15px;
+  }
+
+  .tool-checkBox {
+    margin-right: 15px;
+  }
+  
+  .tool-button {
+    margin-right: 15px;
+  }
+  
+  .tool-span {
+    margin-right: 15px;
+  }
+  

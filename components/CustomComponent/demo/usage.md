@@ -69,6 +69,14 @@ class App extends Component {
     }
   },
   {
+    label: '复选',
+    key: 'checkBox',
+    component: 'CheckBox',
+    field: 'checkBox',
+    componentProps: {
+    }
+  },
+  {
     label: '单选',
     key: 'radio',
     component: 'Radio',
