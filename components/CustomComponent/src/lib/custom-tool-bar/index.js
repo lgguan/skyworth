@@ -56,7 +56,7 @@ const RenderInput = (props) => {
       <Input field={field}
         className="tool-input"
         {...item.componentProps}
-        {...field.init(`${item.field}`, { initValue: item.defaultValue })}
+        {...field.init(`${item.field}`, { initValue: item.defaultValue }, { onChange: item.componentProps.onChange })}
       />
     </div>
   );
@@ -72,7 +72,7 @@ const RenderSelect = (props) => {
       <Select field={field}
         className="tool-select"
         {...item.componentProps}
-        {...field.init(`${item.field}`, { initValue: item.defaultValue })}
+        {...field.init(`${item.field}`, { initValue: item.defaultValue }, { onChange: item.componentProps.onChange })}
       />
     </div>
   );
@@ -88,7 +88,7 @@ const RenderDatePicker = (props) => {
       <DatePicker field={field}
         className="tool-datePicker"
         {...item.componentProps}
-        {...field.init(`${item.field}`, { initValue: item.defaultValue })} />
+        {...field.init(`${item.field}`, { initValue: item.defaultValue }, { onChange: item.componentProps.onChange })} />
     </div>
   );
 }
@@ -103,7 +103,7 @@ const RenderTimePicker = (props) => {
       <TimePicker field={field}
         className="tool-timePicker"
         {...item.componentProps}
-        {...field.init(`${item.field}`, { initValue: item.defaultValue })} />
+        {...field.init(`${item.field}`, { initValue: item.defaultValue }, { onChange: item.componentProps.onChange })} />
     </div>
   );
 }
@@ -112,10 +112,10 @@ const RenderCheckbox = (props) => {
   const { item, field } = props;
   return (
     <div className="tool-item">
-      <Checkbox 
-        className="tool-checkBox" 
+      <Checkbox
+        className="tool-checkBox"
         {...item.componentProps}
-        {...field.init(`${item.field}`, {valueName: 'checked', initValue: item.defaultValue || false })}
+        {...field.init(`${item.field}`, { valueName: 'checked', initValue: item.defaultValue || false }, { onChange: item.componentProps.onChange })}
       >
         {item.label}
       </Checkbox>
@@ -143,10 +143,11 @@ export default class CustomToolBar extends Component {
   };
 
   static defaultProps = {
-    config: []
+    config: [],
+    onChange: () => { }
   };
 
-  field = new Field(this);
+  field = new Field(this, { onChange: this.props.onChange });
   getField = () => {
     return this.field;
   }

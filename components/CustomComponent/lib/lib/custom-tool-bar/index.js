@@ -131,6 +131,8 @@ var RenderInput = function RenderInput(props) {
     className: "tool-input"
   }, item.componentProps, field.init("".concat(item.field), {
     initValue: item.defaultValue
+  }, {
+    onChange: item.componentProps.onChange
   }))));
 };
 
@@ -146,6 +148,8 @@ var RenderSelect = function RenderSelect(props) {
     className: "tool-select"
   }, item.componentProps, field.init("".concat(item.field), {
     initValue: item.defaultValue
+  }, {
+    onChange: item.componentProps.onChange
   }))));
 };
 
@@ -161,6 +165,8 @@ var RenderDatePicker = function RenderDatePicker(props) {
     className: "tool-datePicker"
   }, item.componentProps, field.init("".concat(item.field), {
     initValue: item.defaultValue
+  }, {
+    onChange: item.componentProps.onChange
   }))));
 };
 
@@ -176,6 +182,8 @@ var RenderTimePicker = function RenderTimePicker(props) {
     className: "tool-timePicker"
   }, item.componentProps, field.init("".concat(item.field), {
     initValue: item.defaultValue
+  }, {
+    onChange: item.componentProps.onChange
   }))));
 };
 
@@ -189,6 +197,8 @@ var RenderCheckbox = function RenderCheckbox(props) {
   }, item.componentProps, field.init("".concat(item.field), {
     valueName: 'checked',
     initValue: item.defaultValue || false
+  }, {
+    onChange: item.componentProps.onChange
   })), item.label));
 };
 
@@ -211,7 +221,9 @@ function (_Component) {
 
     (0, _classCallCheck2.default)(this, CustomToolBar);
     _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CustomToolBar).call(this, props));
-    _this.field = new _field.default((0, _assertThisInitialized2.default)(_this));
+    _this.field = new _field.default((0, _assertThisInitialized2.default)(_this), {
+      onChange: _this.props.onChange
+    });
 
     _this.getField = function () {
       return _this.field;
@@ -236,7 +248,8 @@ function (_Component) {
 }(_react.Component), _class2.displayName = 'ToolBar', _class2.propTypes = {
   config: _propTypes.default.array
 }, _class2.defaultProps = {
-  config: []
+  config: [],
+  onChange: function onChange() {}
 }, _temp)) || _class;
 
 exports.default = CustomToolBar;

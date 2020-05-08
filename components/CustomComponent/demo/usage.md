@@ -20,6 +20,9 @@ class App extends Component {
     field: 'name',
     componentProps: {
       trim: true,
+      onChange: (value) => {
+        console.log('onChange', value)
+      },
       placeholder: '请输入姓名'
     }
   },
@@ -30,6 +33,9 @@ class App extends Component {
     field: 'sex',
     defaultValue: 0,
     componentProps: {
+      onChange: (value) => {
+        console.log('onChange', value)
+      },
       dataSource: [
         {
           label: 'All',
@@ -64,6 +70,9 @@ class App extends Component {
     field: 'time',
     defaultValue: '01:30',
     componentProps: {
+      onChange: (value) => {
+        console.log('onChange', value)
+      },
       placeholder: 'Please select time',
       format: 'HH:mm',
     }
@@ -74,6 +83,9 @@ class App extends Component {
     component: 'CheckBox',
     field: 'checkBox',
     componentProps: {
+      onChange: (value) => {
+        console.log('onChange', value)
+      },
     }
   },
   {
@@ -113,7 +125,7 @@ class App extends Component {
         <CustomToolBar config = {this.config}
           getInstance={(childCp) => {
             if (childCp) {
-              this._searchField = childCp.getField()
+              this._searchField = childCp.getField();
             }
           }} 
         />

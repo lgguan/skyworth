@@ -1,6 +1,6 @@
 {
   "name": "@skyworthcloud/component",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "自定义工具条",
   "files": [
     "demo/",
@@ -25,7 +25,7 @@
     "component"
   ],
   "dependencies": {
-    "@alifd/next": "^1.15.11",
+    "@alifd/next": "^1.18.17",
     "moment": "^2.24.0",
     "prop-types": "^15.5.8"
   },
@@ -47,5 +47,5 @@
     "title": "custom tool bar",
     "category": "Filter"
   },
-  "homepage": "https://unpkg.com/@skyworthcloud/component@1.0.6/build/index.html"
+  "homepage": "https://unpkg.com/@skyworthcloud/component@1.0.7/build/index.html"
 }
