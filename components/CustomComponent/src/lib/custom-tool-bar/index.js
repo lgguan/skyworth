@@ -19,6 +19,9 @@ const RenderToolBar = (props) => {
     else if (item.component === 'DatePicker') {
       return <RenderDatePicker key={index} item={item} field={field} />
     }
+    else if (item.component === 'DateRangePicker') {
+      return <RenderDateRangePicker key={index} item={item} field={field} />
+    }
     else if (item.component === 'TimePicker') {
       return <RenderTimePicker key={index} item={item} field={field} />
     }
@@ -86,6 +89,21 @@ const RenderDatePicker = (props) => {
         {item.label}
       </span>
       <DatePicker field={field}
+        className="tool-datePicker"
+        {...item.componentProps}
+        {...field.init(`${item.field}`, { initValue: item.defaultValue }, { onChange: item.componentProps.onChange })} />
+    </div>
+  );
+}
+
+const RenderDateRangePicker = (props) => {
+  const { item, field } = props;
+  return (
+    <div className="tool-item">
+      <span className="tool-span">
+        {item.label}
+      </span>
+      <DatePicker.RangePicker field={field}
         className="tool-datePicker"
         {...item.componentProps}
         {...field.init(`${item.field}`, { initValue: item.defaultValue }, { onChange: item.componentProps.onChange })} />

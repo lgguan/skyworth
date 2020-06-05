@@ -88,6 +88,12 @@ var RenderToolBar = function RenderToolBar(props) {
         item: item,
         field: field
       });
+    } else if (item.component === 'DateRangePicker') {
+      return _react.default.createElement(RenderDateRangePicker, {
+        key: index,
+        item: item,
+        field: field
+      });
     } else if (item.component === 'TimePicker') {
       return _react.default.createElement(RenderTimePicker, {
         key: index,
@@ -161,6 +167,23 @@ var RenderDatePicker = function RenderDatePicker(props) {
   }, _react.default.createElement("span", {
     className: "tool-span"
   }, item.label), _react.default.createElement(_datePicker.default, (0, _extends2.default)({
+    field: field,
+    className: "tool-datePicker"
+  }, item.componentProps, field.init("".concat(item.field), {
+    initValue: item.defaultValue
+  }, {
+    onChange: item.componentProps.onChange
+  }))));
+};
+
+var RenderDateRangePicker = function RenderDateRangePicker(props) {
+  var item = props.item,
+      field = props.field;
+  return _react.default.createElement("div", {
+    className: "tool-item"
+  }, _react.default.createElement("span", {
+    className: "tool-span"
+  }, item.label), _react.default.createElement(_datePicker.default.RangePicker, (0, _extends2.default)({
     field: field,
     className: "tool-datePicker"
   }, item.componentProps, field.init("".concat(item.field), {

@@ -64,6 +64,17 @@ class App extends Component {
     }
   },
   {
+    label: '时间范围',
+    key: 'rangeDate',
+    component: 'DateRangePicker',
+    field: 'rangeDate',
+    // defaultValue: '2019-08-10 01:30:00',
+    componentProps: {
+      placeholder: 'Please select date',
+      showTime: { format: 'HH:mm', minuteStep: 15 }
+    }
+  },
+  {
     label: '时间',
     key: 'time',
     component: 'TimePicker',
